@@ -12,11 +12,15 @@
 
 n = int(input("Введите количество элементов в массиве: "))
 x = int(input("Введите число X: "))
-numb = [0] * n
+# numb = [0] * n  # вариант 1
+numb = [] # вариант 2
 count = 0
 for i in range(n):
-    numb[i] = int(input("Введите элементы массива: "))
-    # print(numb[i])
+    # numb[i] = int(input("Введите элементы массива: ")) # вариант 1
+    numb.append(i) # вариант 2
+    # print(numb)
     if numb[i] == x:
         count += 1
+print(*numb)
 print("->", count)
+
