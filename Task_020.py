@@ -33,3 +33,5 @@ for i in line:
             sum += key
 
 print(sum)
+
+# print(sum([key for i in line for key, value in Scrabble.items() if i in value]))
