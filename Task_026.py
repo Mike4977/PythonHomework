@@ -3,5 +3,6 @@ def exp(a, b):
       return a
   return (a * exp(a, b - 1))
     
-
-print(exp(3, 5))
+a = int(input("Введите число: "))
+b = int(input("Введите степень: "))
+print("A = ", a, "B = ", b, "-> ",exp(a, b))
