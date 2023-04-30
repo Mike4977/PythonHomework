@@ -9,16 +9,24 @@
 # Вывод: [1, 9, 13, 14, 19]
 
 
-arr = [-5, 9, 0, 3, -1, -2, 1,\
-4, -2, 10, 2, 0, -9, 8, 10, -9,\
-0, -5, -5, 7]
+# arr = [-5, 9, 0, 3, -1, -2, 1,\
+# 4, -2, 10, 2, 0, -9, 8, 10, -9,\
+# 0, -5, -5, 7]
 
-min = int(input("Минимальное число диапазона: "))
-max = int(input("Максимальное число диапазона: "))
+# min = int(input("Минимальное число диапазона: "))
+# max = int(input("Максимальное число диапазона: "))
 
-index = []
-for i in range(len(arr)):
-    if min <= arr[i] <= max:
-        index.append(i)
+# index = []
+# for i in range(len(arr)):
+#     if min <= arr[i] <= max:
+#         index.append(i)
 
-print(index)
+# print(index)
+
+
+list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+min_number = int(input())
+max_number = int(input())
+for i in range(len(list_1)):
+    if min_number <= list_1[i] <= max_number:
+        print(i)
