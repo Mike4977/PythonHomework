@@ -11,12 +11,15 @@ def main():
         elif ask == 2:
             find = view.search()
             database.search(find)
+        elif ask == 3:
+            database.sort_name()
+        elif ask == 4:
+            database.sort_date()    
         elif ask == 5:
+            database.print_name()
+        elif ask == 6:
             database.read()
         elif ask == 0:
             break
-        # elif ask == 4:
-        # elif ask == 5:
-            # str = view.input_main()
-
+        
 main()

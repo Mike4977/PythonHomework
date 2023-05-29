@@ -15,6 +15,29 @@ def search(data_search):
         if x == False:
                 print('Таких данных нет в справочнике')
 
+def sort_name():
+    with open("db.txt", 'r') as file:
+        data = file.readlines()
+        data.sort()
+        # print(data)
+    with open("db.txt", 'w') as file:
+        file.writelines(data)
+
+
+def sort_date():
+    with open("db.txt", 'r') as file:
+        data = file.readlines()
+        data.sort(key = lambda x: x[2])
+        # print(data)
+    with open("db.txt", 'w') as file:
+        file.writelines(data)    
+
+def print_name():
+    with open("db.txt", 'r') as file:
+        data = file.readlines()
+        for i in data:
+            print(i.split(';')[0])                
+
 def read():
     with open("db.txt", 'r') as file:
         data = file.read()
