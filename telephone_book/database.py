@@ -1,3 +1,6 @@
+import view
+
+
 def added(data):
     with open('db.txt', 'a') as file:
         file.write(data)
@@ -42,4 +45,16 @@ def read():
     with open("db.txt", 'r') as file:
         data = file.read()
         print(data)
+
+def edit_data(str_edit):
+    with open("db.txt", 'r') as file:
+        data = file.readline()
+    with open("db1.txt", 'w') as file1:
+        for i in data:
+            # print(i)
+            if str_edit is None:
+                file1.write(i)
+                
+                
+            
 

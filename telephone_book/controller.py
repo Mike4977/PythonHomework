@@ -19,7 +19,12 @@ def main():
             database.print_name()
         elif ask == 6:
             database.read()
+        elif ask == 7:
+            _edit = view.edit_data()
+            database.edit_data(_edit)
         elif ask == 0:
             break
         
 main()
+
+
