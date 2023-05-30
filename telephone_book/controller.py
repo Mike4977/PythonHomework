@@ -20,8 +20,18 @@ def main():
         elif ask == 6:
             database.read()
         elif ask == 7:
-            _edit = view.edit_data()
-            database.edit_data(_edit)
+            data_delete = view.delete_data()
+            lst_people = database.select_people(data_delete)
+            num = view.select_num()
+            database.delete_str(lst_people[num-1])
+        
+        elif ask == 8:
+            data_edit = view.edit_data()
+            lst_people = database.select_people(data_edit)
+            num = view.select_num()
+            database.edit_str(lst_people[num-1])
+
+
         elif ask == 0:
             break
         
